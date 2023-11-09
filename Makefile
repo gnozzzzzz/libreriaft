@@ -22,17 +22,11 @@ $(OFILES): $(CFILES)
 	gcc -c $(CFLAGS) $(CFILES)
 
 clean:
-	rm $(OFILES)
+	rm -f $(OFILES)
 
 fclean: clean
-	rm $(NAME)
-	#rm .\a.exe
+	rm -f $(NAME)
 
 re: fclean all
 
 .PHONY:  all clean fclean re
-
-mimain:
-	gcc mimain.c -L. -lft
-
-#gcc mimain.c -L. -lft
